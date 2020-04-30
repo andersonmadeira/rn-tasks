@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "prettier/prettier": ["warn"],
+    "no-use-before-define": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
