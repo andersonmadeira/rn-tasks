@@ -13,8 +13,6 @@ export default function App() {
   const [tasks, setTasks] = useState([])
   const [inputText, setInputText] = useState('')
 
-  console.log(tasks)
-
   const addNewTask = (taskText) => {
     if (taskText) {
       setTasks([
@@ -48,14 +46,15 @@ export default function App() {
         </View>
         <FlatList
           data={tasks}
-          style={{ width: '100%' }}
+          style={{ width: '100%', marginTop: 15 }}
           renderItem={(info) => (
-            <View>
+            <View
+              style={{
+                marginVertical: 5,
+              }}
+            >
               <Text
-                onPress={() => {
-                  toggleTaskDone(info.item)
-                  console.log('test:', info.item)
-                }}
+                onPress={() => toggleTaskDone(info.item)}
                 style={{
                   ...styles.taskListItem,
                   ...(info.item.done
